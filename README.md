@@ -1,2 +1,1 @@
-# in progress for a speech
-## node, socket.io, impress.js
+Quickstart kit for node/socket apps
