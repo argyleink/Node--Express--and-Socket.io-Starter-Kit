@@ -7,8 +7,11 @@ server.listen(8000);
 app.use(express.static(__dirname + '/'));
 
 io.sockets.on('connection', function (socket) {
-  socket.emit('news', { hello: 'world' });
-  socket.on('my other event', function (data) {
-    console.log(data);
-  });
+
+	socket.emit('server event', { text: 'Socket.io works' });
+
+	socket.on('client event', function (data) {
+		console.log(data.text);
+	});
+
 });
